@@ -9,7 +9,6 @@ output:
 <img src="headshot.jpg" style="width:30%">
 
 
-
 ## Bio
 
 

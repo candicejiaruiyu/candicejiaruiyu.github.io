@@ -5,7 +5,6 @@ output:
     orientation: columns
     vertical_layout: fill
 ---
-
 ```{r setup, include=FALSE}
 library(flexdashboard)
 
@@ -13,19 +12,15 @@ library(tidyverse)
 library(plotly)
 library(p8105.datasets)
 
-data("nyc_airbnb")
+data("instacart")
 
-nyc_airbnb = 
-  nyc_airbnb |> 
-  mutate(stars = review_scores_location / 2) |> 
-  select(borough = neighbourhood_group, 
-         neighbourhood, stars, price, room_type, lat, long) |> 
-  drop_na(stars) |> 
-  filter(
-    borough == "Manhattan",
-    room_type == "Entire home/apt",
-    price %in% 100:500
-  )
+set.seed(123)  # set seed for reproducibility
+instacart_sample <- sample_n(instacart, 10000)
+
+snow <- read_csv("nynoaadat.csv") %>%
+  drop_na() %>%
+  filter(snow != 0) %>%
+  filter(date > '2005-01-01')
 ```
 
 
@@ -35,9 +30,14 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-nyc_airbnb |> 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) |> 
-  plot_ly(y = ~price, color = ~neighbourhood, type = "box", colors = "viridis")
+instacart_sample %>%
+#  mutate(text_label = str_c("Price: $", price, "\nRating: ", stars)) %>% 
+  filter(aisle %in% c("baking ingredients", "dog food care", 
+                      "packaged vegetables fruits", "fresh vegetables",
+                      "yogurt", "milk")) %>%
+  mutate(aisle = fct_reorder(aisle, days_since_prior_order)) %>%
+  plot_ly(y = ~days_since_prior_order, color = ~aisle, type = "box", colors = "viridis")
+
 ```
 
 Column {data-width=350}
@@ -45,7 +45,12 @@ Column {data-width=350}
 
 ### Chart B
 
-```{r}
+```{r eval = FALSE}
+instacart_sample %>%
+  plot_ly(x = ~add_to_cart_order, y = ~days_since_prior_order, type = 'scatter', mode = 'markers') %>%
+  layout(title = "Order Hour vs Day of Week")
+
+
 nyc_airbnb |> 
   mutate(text_label = str_c("Price: $", price, "\nRating: ", stars)) |> 
   plot_ly(
@@ -56,10 +61,14 @@ nyc_airbnb |>
 ### Chart C
 
 ```{r}
-nyc_airbnb |> 
-  count(neighbourhood) |> 
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) |> 
-  plot_ly(
-    x = ~neighbourhood, y = ~n, color = ~neighbourhood,
-    type = "bar", colors = "viridis")
+instacart_sample %>%
+  group_by(aisle) %>%
+  summarize(count_in_aisle = n()) %>%
+  arrange(count_in_aisle) %>%
+  filter(count_in_aisle > 40) %>%
+  mutate(aisle = fct_reorder(aisle, count_in_aisle)) %>% 
+  plot_ly(x =~ aisle, y =~count_in_aisle, color = ~aisle, type = 'bar') %>%
+  layout(title = "Number of Items Ordered in Each Aisle (Aisles > 40 items)",
+         xaxis = list(title = 'Aisle'),
+         yaxis = list(title = 'Number of Items Ordered'))
 ```
