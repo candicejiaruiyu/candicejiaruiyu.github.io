@@ -1,10 +1,49 @@
 ---
-title: "My awesome website"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
+title: "Jiarui Yu"
+image: "frank.jpg"
+links:
+  - label: LinkedIn
+    url: "https://linkedin.com/"
+  - label: Twitter
+    url: "https://twitter.com/"
+  - label: GitHub
+    url: "https://github.com/"
+  - label: Email
+    url: "mailto:email@email.com"
+output:
+  postcards::trestles
 ---
+
+## Bio
+  
+Frank Hermosillo studies neural networks and their applications at Google Brain. His research focuses on differentiable network pruning approximation and 
+decentralized gradient inversion mechanics. He frequently collaborates with 
+researchers who study machine learning, computer vision, and cognitive science.
+His work has been featured in WIRED, The Atlantic, Newsweek, and The New York 
+Times Magazine.
+
+## Education
+
+**Columbia University** | New York, NY
+
+M.S. Biostatistics | September 2023 - May 2025
+
+**University of California, Santa Barbara** | Santa Barbara, CA
+
+M.S. Actuarial Science | September 2022 - June 2023
+
+**University of California, Santa Barbara** | Santa Barbara, CA
+
+B.S. Actuarial Science | September 2019 - June 2022
+
+## Experience
+
+**UCSB Pstat Department** | Teaching Assistant | September 2022 - June 2023
+
+**Ayou E-commerce** | Marketing Influencer | June 2020 - Present
+
+
+
 
 # This is Jeff's awesome website
 
