@@ -11,7 +11,7 @@
 
 
 
-<title>Jiarui Yu</title>
+<title>Jiarui (Candice) Yu</title>
 
 <script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -221,6 +224,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -228,6 +294,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -262,6 +338,9 @@ $(document).ready(function () {
      
   </a>
 </li>
+<li>
+  <a href="dashboard.html">Dashboard</a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -271,67 +350,30 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Jiarui Yu</h1>
+<h1 class="title toc-ignore">Jiarui (Candice) Yu</h1>
 
 </div>
 
 
+<p><img src="headshot.jpg" style="width:30%"></p>
 <div id="bio" class="section level2">
 <h2>Bio</h2>
-<p>Frank Hermosillo studies neural networks and their applications at
-Google Brain. His research focuses on differentiable network pruning
-approximation and decentralized gradient inversion mechanics. He
-frequently collaborates with researchers who study machine learning,
-computer vision, and cognitive science. His work has been featured in
-WIRED, The Atlantic, Newsweek, and The New York Times Magazine.</p>
-</div>
-<div id="education" class="section level2">
-<h2>Education</h2>
-<p><strong>Columbia University</strong> | New York, NY</p>
-<p>M.S. Biostatistics | September 2023 - May 2025</p>
-<p><strong>University of California, Santa Barbara</strong> | Santa
-Barbara, CA</p>
-<p>M.S. Actuarial Science | September 2022 - June 2023</p>
-<p><strong>University of California, Santa Barbara</strong> | Santa
-Barbara, CA</p>
-<p>B.S. Actuarial Science | September 2019 - June 2022</p>
-</div>
-<div id="experience" class="section level2">
-<h2>Experience</h2>
-<p><strong>UCSB Pstat Department</strong> | Teaching Assistant |
-September 2022 - June 2023</p>
-<p><strong>Ayou E-commerce</strong> | Marketing Influencer | June 2020 -
-Present</p>
-</div>
-<div id="this-is-jeffs-awesome-website" class="section level1">
-<h1>This is Jeff’s awesome website</h1>
-<p>Here’s a gif of elmo</p>
-<p><img
-src="https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif" /></p>
-<p>You can add text</p>
-<ul>
-<li>and lists</li>
-<li>with extra bullets</li>
-</ul>
-<p>You can <em>FORMAT</em> and <strong>bold?</strong></p>
-<p>This is a <a href="https://www.google.com/">link</a> to a good data
-science tool. Here’s a link to <a href="https://p8105.com">P8105</a>.
-Here’s a link to the <a href="about.html">about</a> page</p>
-</div>
-<div id="heres-a-new-section" class="section level1">
-<h1>Here’s a new section</h1>
-<p>My cat is ted. This is ted:</p>
-<p><img src="images/ted.jpg" /></p>
-<p>Also here’s the “backstage” are in Alumni Auditorium:</p>
-<p><img src="images/backstage.jpg" /></p>
-</div>
-<div id="other-stuff-on-this-page" class="section level1">
-<h1>Other stuff on this page</h1>
-<p>Definitely there is <a href="plotly.html">plotly</a> stuff!</p>
+<p>I have B.S. and M.S. degrees in Actuarial Science from UC Santa
+Barbara, and I am pursuing an M.S. degree in Biostatistics at Columbia
+University. With expertise spanning from advanced data analytics to
+impactful social media marketing, I’ve been involved in pivotal research
+projects and have excelled in multiple actuarial exams. At UCSB, I not
+only achieved the highest GPA in my major but also actively contributed
+as a Publications Journalist for the Actuarial Association. Passionate
+about blending data-driven insights with practical solutions, I am
+constantly seeking opportunities to further innovate and contribute to
+the industry.</p>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -364,6 +406,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

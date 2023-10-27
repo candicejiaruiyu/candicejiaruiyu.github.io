@@ -1,11 +1,28 @@
 ---
-title: "About this website"
+title: "About Me"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# About
+# Education
 
-This website is pretty great!
+**Columbia University** | New York, NY
+
+M.S. Biostatistics | September 2023 - May 2025
+
+**University of California, Santa Barbara** | Santa Barbara, CA
+
+M.S. Actuarial Science | September 2022 - June 2023
+
+**University of California, Santa Barbara** | Santa Barbara, CA
+
+B.S. Actuarial Science | September 2019 - June 2022
+
+# Experience
+
+**UCSB Pstat Department** | Teaching Assistant | September 2022 - June 2023
+
+**Ayou E-commerce** | Marketing Influencer | June 2020 - Present
+
