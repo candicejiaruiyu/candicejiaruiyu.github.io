@@ -53,7 +53,7 @@ Column {data-width=350}
 ```{r}
 
 ny_noaa_df %>%
-  plot_ly(x = ~tmin, y = ~tmax, color = ~month, colors = "viridis") %>%
+  plot_ly(x = ~tmin, y = ~tmax, color = ~month, opacity=0.5, colors = "viridis") %>%
   layout(xaxis = list(title = 'Mininum Temperature'),
          yaxis = list(title = 'Maximum Temperature'))
 
