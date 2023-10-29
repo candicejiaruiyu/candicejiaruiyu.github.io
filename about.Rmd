@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-# Education
+## Education
 
 **Columbia University** | New York, NY
 
@@ -20,7 +20,7 @@ M.S. Actuarial Science | September 2022 - June 2023
 
 B.S. Actuarial Science | September 2019 - June 2022
 
-# Experience
+## Experience
 
 **UCSB Pstat Department** | Teaching Assistant | September 2022 - June 2023
 
